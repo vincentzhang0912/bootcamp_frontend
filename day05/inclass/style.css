@@ -1,0 +1,12 @@
+
+h1{
+    background-color: aquamarine;
+    color: blue;
+}
+p{
+    background-color: pink;
+}
+/* applies to all those p tags that are inside a div */
+div p{
+    background-color: blueviolet;
+}

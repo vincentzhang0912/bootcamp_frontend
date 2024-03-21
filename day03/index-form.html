@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT</title>
+</head>
+<body>
+    <!--<sup>-->
+    This is a formula e=mc<sup>2</sup>
+    <br>
+    log<sub>4</sub>j - this should sub script
+    <br>
+    <!--input type="text";password;email;number;max-;radio;checkbox;
+    name="gender";textarea
+    --输入用name，其他用value
+    -->
+    <h2>Register here</h2>
+    <!-- <form  method="get"> --><!--get displays data in the address bar-->
+    <!-- action 网址,required-->
+        <form  method="post" action="abc.jsp"><!--post does not data in address bar-->
+
+        <label for="usename">UserName:</label>
+        <input type="text" name="username" maxlength="8" id="username" required/><br>
+
+        <label for="password">password: </label>
+        <input type="password" name="passwor" id="password"><br>
+
+        <label for="password"> check password</label> 
+        <input type="password" name="password" id="password"/><br>
+        
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email"/><br>
+        
+        <label for="phone">phone</label>
+        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/><br>
+
+        <label for="age">age</label>
+        <input type="number" max="100" min="18" name="age" id="age"/><br>
+
+        <label for="gender">gender</label><br>
+        <div id="gender">
+            <input type="radio" name="gender" value="male"/>Male <br>
+            <input type="radio" name="gender"value="femail"/>Femal<br>
+            <input type="radio" name="gender"value="notsay" id="notsay"/>Rather not say<br><br>
+            
+        </div id="gender">
+       
+        <label for="address"></label>
+        <textarea   cols="30" rows="4" name="address" id="address">address here </textarea><br>
+        
+        <label for="register"></label>
+        <input type="submit" value="Register" name="register" id="register"/><br>
+        
+        <hr>
+        <label for="color">Your fav color </label>
+        <input type="color" name="color" id="color"/><br>
+
+        <label for="date">date</label>
+        <input type="date" name="date" id="date"/><br>
+
+        <label for="file">Profile pic</label>
+        <input type="file" name="file" id="file" /><br>
+
+        <label for="reset">reset</label>
+        <input type="reset" name="reset" id="reset"/><br>
+
+        <label for="terms">I accept the terms</label>
+        <input type="checkbox" id="terms"><br>
+
+        <input type="submit" value="Submit"/><br>
+            
+    </form>
+    <!--submit--><br>
+
+
+
+</body>
+</html>

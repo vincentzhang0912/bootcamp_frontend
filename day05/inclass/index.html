@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Internal style -->
+    <style>
+        /* Because we are selecting elements and assigning styles
+        these are called element selectors
+        /* 
+        ABC=html element,called element selector
+        ABC{
+            ...csss rule(applying a css rule)
+        }
+        */
+ 
+        /* h3{
+            background-color: darksalmon;
+            color: darkmagenta;
+        }
+        h4{
+            background-color: darksalmon;
+            color:darkmagenta
+        } */
+
+        /* grouped style */
+        h3,h4,p{
+            background-color: darksalmon;
+            color:darkmagenta;
+        } 
+        /* class selectors */
+        .bgblue{
+            background-color: lightblue;
+        }
+        
+        #sppara{
+            font-family:'segoe UI';
+            font-weight: bolder;
+            background-color:deeppink;
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- Understanding styles -->
+
+    <!--inline style-->
+    <h1 style="background-color:coral;">I am a header !</h1>
+
+    <h2 style="background-color:aquamarine">Which color am I ?</h2>
+
+    <p style="background-color:burlywood;color:chartreuse;font-family: 'Courier New', Courier, monospace;">
+        I am a paragraph,I would like to be in a different color</p>
+
+    <!--internal style-->
+    <h3>Where is my background color mentioned?</h3>
+    <h4>Am I can etch 4 with same color as the line above</h4>
+    <p>Am i also in the same color?</p>
+    <!-- class selector -->
+    <h4 class="bgblue">I am a new header</h4>
+    <h5 class="bgblue">I am another header</h5>
+    <p class="bgblue">I am another para</p>
+    <!-- Id selector in use -->
+    <p id="sppara">I am a special paragraph</p>
+    
+</body>
+</html>

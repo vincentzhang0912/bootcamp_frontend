@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myborder1{
+            background-color:aquamarine;
+            border-width:4px;
+            border-style:groove;
+
+        }
+        #myborder2{
+            border:3px solid cornflowerblue;
+            background-color:blanchedalmond;
+
+
+        }
+        #myborder3{
+            border-top:3px solid cornflowerblue; 
+            /* border-bottom:3px solid cornflowerblue;
+            border-left:3px solid cornflowerblue;
+            border-right:3px solid cornflowerblue; */
+            
+        }
+        #myborder4{
+            /* border-width:1px 2px 3px 4px; *//* top right bottom left*/
+            border-color:blueviolet;
+            border-width:1px 2px 3px ;
+            border-width:2px ;
+            border-style:groove;
+        }
+        #myborder5{
+            border:5px solid darkolivegreen;
+            border-radius: 20px;
+            border-radius:20px 10px 8px 5px;
+        }
+        .mydiv{
+            border:5px solid darkorchid;
+            outline:2px dashed darkolivegreen;
+            margin:10px;
+            border:5px solid darkorchid;
+            padding:10px
+
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myborder1">Borders here</h1>
+    <h1 id="myborder2">Borders here</h1>
+    <h1 id="myborder3">Borders Only on top</h1>
+    <h1 id="myborder4">Different thickness</h1>
+    <h1 id="myborder5">Short hand all in one</h1>
+    <div class="mydiv"><p>hello there</p></div>
+</body>
+</html>
