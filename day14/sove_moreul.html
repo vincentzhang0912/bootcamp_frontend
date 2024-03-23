@@ -1,3 +1,5 @@
+
+Day14-listint.html Updated again
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +36,7 @@
 
 
     </div>
-   
+ 
 
 
     <!--  
@@ -53,18 +55,28 @@
         function addMyItemToTree(){
             //get the text from the field
             let itemText = document.getElementById("myitem").value;
-           
+            document.getElementById("myitem").value ="";
+         
             //create a new list item with that text
             let mylistItem = document.createElement("li");
             mylistItem.innerHTML = itemText;
 
 
-            //create a new UL element
-            let myULElement;
+            //create a new UL element if it does not exist
+            // if the elements exists then get that element
+            let myULElement = document.getElementById("myul");
 
-            (!myULElement) ? myULElement = document.createElement('ul') : myULElement;
 
-            
+            //using if
+            // if(!myULElement) {
+            //     myULElement = document.createElement('ul');
+            //     myULElement.setAttribute("id","myul")
+            // }
+
+
+            //using ternary
+            myULElement =  ((!myULElement)) ? document.createElement('ul') : myULElement;
+            myULElement.setAttribute("id","myul");
            
             //append the li to ul
             myULElement.appendChild(mylistItem);
@@ -82,6 +94,6 @@
 
 
 
-    </script>
+     </script>
 </body>
 </html>
