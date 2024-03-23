@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form—Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .normal-font{
+            font-weight:normal;
+        }
+        .form-control {
+        display:inline-flex
+    }
+    #input1{
+        display:inline !important;
+    
+    }
+    </style>
+</head>
+<body>
+    
+    <h1>Subject Marks</h1>
+    <div class="Form—Table">
+        <div class=" mb-3">
+            <!-- <div class="row  "> -->
+                    <!-- <div class="col-md-6 "> -->
+                        <label for="label1" class=" ">Subject 1:</label> 
+                        <input
+                        type="number"
+                        name="label1"
+                        id="input1"
+                        class=" form-control "
+                       
+                       
+                        />
+                       
+                    <!-- </div> -->
+
+                    <!-- <div class=" col-md-6">
+                      
+                    </div> -->
+            </div>
+        </div>
+        <div class="container-fluid mb-3">
+            <div class="row  ">
+                    <div class="col-md-6 ">
+                        <label for="label1" class=" col-md-6 ">Subject 2:</label>
+                    </div>
+
+                    <div class=" col-md-6">
+                        <input
+                        type="number"
+                        name="label1"
+                        id="input2"
+                        class=" form-control "
+                        
+                        />
+                    </div>
+            </div>
+        </div>
+        <div class="container-fluid mb-3">
+            <div class="row  ">
+                    <div class="col-md-6 ">
+                        <label for="label1" class=" col-md-6 ">Subject 3:</label>
+                    </div>
+
+                    <div class=" col-md-6">
+                        <input
+                        type="number"
+                        name="label1"
+                        id="input3"
+                        class=" form-control "
+                        
+                        />
+                    </div>
+            </div>
+        </div>
+        <div class="container-fluid mb-3">
+            <div class="row  ">
+                    <div class="col-md-6 ">
+                        <label for="label1" class=" col-md-6 ">Subject 4:</label>
+                    </div>
+
+                    <div class=" col-md-6">
+                        <input
+                        type="number"
+                        name="label1"
+                        id="input4"
+                        class=" form-control "
+                        
+                        />
+                    </div>
+            </div>
+            <button
+            type="submit"
+            class="btn btn-primary "
+            onclick="submitEvent()"
+        >
+            Submit
+        </button>
+        </div>
+    </div>
+
+
+    <br>
+    <h1>Subject Marks and GPA</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Marks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="normal-font ">Subject1</th>
+            <td id="output1" class=""></td>
+          </tr>
+          <tr>
+            <th scope="row" class="normal-font table-borderless">Subject2</th>
+            <td id="output2"></td>
+          </tr>
+          <tr>
+            <th scope="row" class="normal-font">Subject3</th>
+            <td id="output3"></td>
+          </tr>
+          <tr>
+            <th scope="row" class="normal-font">Subject4</th>
+            <td id="output4"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h1 id="gpa">Overall GPA:</h1>
+    
+    
+    
+  
+    <script>
+    function submitEvent(){
+    // get input value
+    const in1=document.getElementById('input1').value
+    const in2=document.getElementById('input2').value
+    const in3=document.getElementById('input3').value
+    const in4=document.getElementById('input4').value
+   
+    // update output value
+    document.getElementById("output1").innerHTML=in1
+    document.getElementById("output2").innerHTML=in2
+    document.getElementById("output3").innerHTML=in3
+    document.getElementById("output4").innerHTML=in4
+    // calculate GPA
+    let res=((parseInt(in1)+parseInt(in2)+parseInt(in3)+parseInt(in4))/40).toFixed(2)
+    //display GPA)
+    document.getElementById("gpa").innerHTML=`<h1 >Overall GPA:${res}</h1>`
+    }
+    </script>
+</body>
