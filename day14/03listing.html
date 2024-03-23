@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+<h1> To Do List</h1>
+    <div class="mb-3">
+        <label for="" class="form-label">Task</label>
+        <input
+            type="text"
+            class="form-control"
+            name="myitem"
+            id="myitem"
+            aria-describedby="helpId"
+            placeholder=""
+        />
+        <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <button onclick="addMyItem()" type="button" class="btn btn-primary" >
+        Add Task
+    </button>
+
+
+    <button onclick="addMyItemToTree()" type="button" class="btn btn-primary" >
+        Add Using DOM Tree
+    </button>
+    <div id="mydiv">
+
+
+    </div>
+   
+
+
+    <!--  
+ To display items as list elements
+    -->
+    <script>
+        let myval="<ul>";        
+        function addMyItem(){
+           myval = myval + "<li> "+document.getElementById('myitem').value +"</li>";
+           document.getElementById("myitem").value ="";
+           let divObj = document.getElementById('mydiv');
+           divObj.innerHTML = myval;              
+        }
+
+
+        function addMyItemToTree(){
+            //get the text from the field
+            let itemText = document.getElementById("myitem").value;
+           
+            //create a new list item with that text
+            let mylistItem = document.createElement("li");
+            mylistItem.innerHTML = itemText;
+
+
+            //create a new UL element
+            let myULElement = document.createElement('ul');
+           
+            //append the li to ul
+            myULElement.appendChild(mylistItem);
+           
+            //get the div
+            let myDivElement = document.getElementById("mydiv");
+           
+            //append the newly created UL to the div
+            myDivElement.appendChild(myULElement);
+           
+
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>
