@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+    </script>
+    
+</head>
+<body>
+  
+    <h1  id="ctext">hello</h1>
+    <p  id="innerhello">innerhello</p>
+    <h1  id="showhide">show/hide</h1>
+
+    <button onclick="ctext()">changetext</button>
+    <button onclick="handleinnerhello()">innerHTML</button>
+    <button onclick="handleshowhide()">show hide</button>
+
+<script>
+    function ctext(){
+        const a2=document.getElementById("ctext")
+        const ntext="changedtext";
+        a2.textContent=ntext;
+    }
+    function handleinnerhello(){
+        const a1=document.getElementById("innerhello")
+        const ntext="<b>newhello</b>"
+        a1.innerHTML=ntext
+        // a1.innerHTML="<b>newhello</b>"
+
+    }
+    function handleshowhide(){
+        let a3=document.getElementById("showhide")
+        
+        // if(a3.style.display =="none"){
+        //     a3.style.display="block"
+        // }else{
+        //     a3.style.display= "none"
+        // }
+
+
+        // a3.style.display=
+        (a3.style.display =="none")  ? a3.style.display="block" : a3.style.display= "none";
+
+
+                       
+        // a3.style.display = (a3.style.display === "none") ? "block" : "none";
+    }
+
+</script>
+</body>
+</html>
