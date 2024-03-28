@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Icons</title>
+    <!-- 引入 Font Awesome 图标库的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1uv/Q5Hme2L2zB3XbM5D/OK4QIst7zTEOKyCH3jQo4JHrFwaVz9Ct49u1MKpOofksFWXxVUiyRgQ+XW3K1CZmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- 天气图标显示区域 -->
+    <div id="weather-icon" class="text-center mt-3">
+        <!-- 这里将显示天气图标 -->
+    </div>
+
+    <script>
+        // 这是从 OpenWeatherMap API 中获取的天气信息
+        const weatherData = {
+            "weather": [
+                {
+                    "description": "moderate rain",
+                    "icon": "10n"
+                }
+            ]
+        };
+
+        // 根据天气描述信息和图标编码创建一个映射关系
+        const weatherIconMap = {
+            "moderate rain": "fa-cloud-rain", // 中等雨夜间
+            // 可根据需要添加更多的天气描述信息和相应的图标编码
+        };
+
+        // 获取显示天气图标的元素
+        const weatherIconElement = document.getElementById('weather-icon');
+
+        // 根据天气描述信息查找相应的图标编码
+        const weatherDescription = weatherData.weather[0].description;
+        const weatherIconCode = weatherData.weather[0].icon;
+
+        // 根据天气描述信息选择相应的 Font Awesome 图标
+        const iconClass = weatherIconMap[weatherDescription];
+
+        // 使用 Font Awesome 图标
+        weatherIconElement.innerHTML = `<i class="fas ${iconClass} fa-5x"></i>`; // fa-5x 是图标大小的样式，您可以根据需要调整大小
+    </script>
+</body>
+</html>
