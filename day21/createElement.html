@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Elem</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Creating my own component using React and ReactDOM 
+    1.get the root element and create root node
+    2.create our custom elements
+    3.render the elements to the root
+  -->
+  <script>
+    let rootNode=ReactDOM.createRoot(root);
+
+    let MyHeader=React.createElement('h1',{}," Procareer welcoms you!")
+    let MyList=React.createElement('ul',{},
+    [React.createElement('li',{},"One"),
+     React.createElement('li',{},"Two")])
+
+    let MyDiv =React.createElement("div",{},
+      React.createElement('h1',{},"heading of my component"),
+      React.createElement("p",{},"this is a temp text..lorem ipsum.."),
+      React.createElement('ul',{},
+      [React.createElement('li',{},"One"),
+      React.createElement('li',{},"Two")])
+
+    )
+
+    // rootNode.render([MyHeader,MyList])
+    rootNode.render(MyDiv)
+  </script>
+</body>
+</html>
