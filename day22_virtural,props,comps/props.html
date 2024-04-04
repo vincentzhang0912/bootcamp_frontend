@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Props</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+  <div id="root">
+
+  </div>
+  <script type="text/babel">
+    // let MyComp =<div> <h1>Hello!</h1><p>Welcome!</p></div>
+    let rootNode=ReactDOM.createRoot(root);
+
+    let MyComp=(props)=>{
+      return(
+          <div> 
+                <h1>Hello!</h1>
+                <p>Welcome {props.name}!</p><br/>
+                <p>You are {props.age}years old</p>
+                <p>You will be 100 in {100-props.age}</p>
+                I do {props.veggie ?"not":""} eat meat<br/>
+                I speak {props.langs.toString()} languages<br/>
+                I got {props.marks.Math} in Math
+          </div>)
+    }
+
+    rootNode.render(<MyComp name="Jane" age={26} veggie={true} langs={["eng","hindi"]} marks={{"Eng":100,"Math":100}}  />)
+  </script>
+</body>
+</html>

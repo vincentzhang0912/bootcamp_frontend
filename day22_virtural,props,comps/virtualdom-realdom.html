@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+
+  <div id="regularDiv">
+    This should change to show Date
+  </div>
+
+  <br>
+  <div id="reactDiv">
+    This should change to show Date
+  </div>
+  
+  <script type="text/babel">
+    let rootNode =ReactDOM.createRoot(document.getElementById("reactDiv"));//createRoot(reactDiv)
+
+    let fun =()=>{
+      
+      //updating the DOM tree the regulary way
+      let myStr="<div> <h1>Date Time</h1><input/><p>"+(new Date()).toString()+"</p></div>"
+      document.getElementById('regularDiv').innerHTML=myStr
+
+      //using React
+      
+      let MyDiv=<div>
+                  <h1>Date Time again</h1>
+                  <input/> <br/>
+                  {(new Date()).toString()}
+                </div>
+      rootNode.render(MyDiv);
+    }
+    setInterval(fun,1000)
+   
+  </script>
+</body>
+</html>
+<!-- regular update the whole div ;virtual update the part;input work regular not work -->
