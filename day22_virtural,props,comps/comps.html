@@ -28,9 +28,16 @@
         )
       }
     }
-    //call only one functional component
-    //call class and functional component
-    rootNode.render([<MyClassComp/>,<MyFunctionalComp firstName="Jane" lastName="Doe" />])
+      // call only one functional component 
+        // rootNode.render(<MyFunctionalComp firstName="Jane" lastName="Doe"/>);
+
+        //call the same functional component but with different props , reusability of components
+        // rootNode.render([<MyFunctionalComp firstName="Jane" lastName="Doe"/>,<MyFunctionalComp firstName="John" lastName="Stanley"/>]);
+
+        //call class component
+        // rootNode.render(<MyClassComp/>);
+      //call class and functional component
+      rootNode.render([<MyClassComp/>,<MyFunctionalComp firstName="Jane" lastName="Doe" />])
 
   
 
