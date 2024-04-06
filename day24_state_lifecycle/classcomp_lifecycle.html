@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class Comp Lie Cycle</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+</head>
+<body>
+    <div id="root"> This should change</div>
+    <script type="text/babel">
+         let rootNode = ReactDOM.createRoot(root);
+     
+        class ClassLifeCycle extends React.Component{
+
+
+        // 1. Called first
+        constructor(){
+            super();
+            console.log("constructor!");
+            this.state = {counter:0}
+        }
+
+
+        //2. called just before first/initial render
+        componentWillMount(){
+            console.log("componentWillMount ");
+        }
+
+
+        // anytime when this event occurs , not a lifecycle method
+        clickHandler = () => {
+            this.setState({counter:this.state.counter+1})
+            // console.log(this.state.counter);
+        }
+
+
+        // 3. Called after component will mount and..
+        // .. is also called each time componentShouldUpdate() returns true
+        render(){
+            return(
+                <div>
+                    Class Component!
+                    {this.state.counter}
+                    <button onClick={this.clickHandler}> Click </button>
+                </div>
+            );
+        }
+
+
+        //4. Called after initial render only
+        componentDidMount() {
+            console.log("component Did Mount ");
+ 
+        }
+
+
+        // 5. By default this returns true, meaning, if we do not write the code below
+        // but we can always over-ride it by returning false.
+        // if true -- component Will Update is called
+         //checked before updating a component, on state change
+        //if this returns false
+            // component will not get updated /re-rendered
+            // componentWillUpdate will not be called
+        shouldComponentUpdate(){
+            console.log(this.state.counter);
+            console.log('shouldComponentUpdate ');
+            // return false;
+            return true;
+        }
+
+
+
+
+        //6. Is called if shouldComponentUpdate returns true      
+        componentWillUpdate(){
+            console.log(" componentWillUpdate ");
+        }
+       
+             
+        //7.  after componentWillUpdate , render method is called and then
+        // after render this method is called
+        componentDidUpdate(){
+            console.log(" component did Update ");
+        }
+
+
+        //8. called just before moving on to other component
+        componentWillUnmount() {
+            console.log("component will un Mount ");
+        }
+
+
+        }
+        rootNode.render(<ClassLifeCycle/>)
+    </script>
+</body>
+</html>
+
