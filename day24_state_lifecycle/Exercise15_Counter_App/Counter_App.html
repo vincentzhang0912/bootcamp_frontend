@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Class Comp Lie Cycle</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    let rootNode=ReactDOM.createRoot(root);
+
+    let Counter=(props)=>{
+      let useState = React.useState;
+      let [counter,setCounter]=useState(props.initialValue )
+
+    let onClickHandler=()=>{
+        counter ++;
+        setCounter(counter)
+      }
+      return (
+        <div>
+          <h1>{counter}</h1>
+          <button onClick={onClickHandler}>click me</button>
+        </div>
+      )
+    }
+
+
+    rootNode.render(<Counter initialValue={27} />)
+  </script>
+</body>
+</html>
