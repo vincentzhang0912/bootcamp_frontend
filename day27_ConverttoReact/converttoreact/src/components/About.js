@@ -1,10 +1,10 @@
 const About = () => {
   return ( 
     <>
-      <div class="row align-items-md-stretch">
-    <div class="col-md-12">
+      <div className="row align-items-md-stretch">
+    <div className="col-md-12">
         <div
-            class="h-100 p-5 text-white bg-info border rounded-3"
+            className="h-100 p-5 text-white bg-info border rounded-3"
         >
             <h2>Vincent Store</h2>
             <h3>Welcome to BuyBest, your number one source for all phones and gadgets.
