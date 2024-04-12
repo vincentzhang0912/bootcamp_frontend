@@ -20,7 +20,7 @@ const MyNavbar = () => {
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav me-auto mt-2 mt-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" to="home" aria-current="page"
+              <Link className="nav-link active" to="/" aria-current="page"
                 >Home
                 <span className="visually-hidden">(current)</span></Link>
             </li>
@@ -29,6 +29,12 @@ const MyNavbar = () => {
                 >About
                 <span className="visually-hidden">(current)</span></Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="ceo" aria-current="page"
+                >CEO
+                <span className="visually-hidden">(current)</span></Link>
+            </li>
+         
             
           </ul>
          
