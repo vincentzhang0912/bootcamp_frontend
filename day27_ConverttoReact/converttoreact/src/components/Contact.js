@@ -1,8 +1,8 @@
 const Contact = () => {
   return ( 
-    <div className="container-fluid w-50 ">
+    <div className="container-fluid w-50 " style={{ textAlign: 'left' }}>
       <div className="mb-5 ">
-        <label htmlFor="" className="form-label text-start" style={{ textAlign: 'left' }}>Name</label>
+        <label htmlFor="" className="form-label text-start" >Name :</label>
         <input
             type="text"
             name=""
@@ -13,7 +13,7 @@ const Contact = () => {
         />
       </div>
       <div className="mb-3">
-          <label htmlFor="" className="form-label ">Email</label>
+          <label htmlFor="" className="form-label ">Email :</label>
           <input
               type="text"
               name=""
@@ -28,7 +28,7 @@ const Contact = () => {
           <label className="form-check-label text-left" htmlFor=""> Notify via email</label>
       </div>
       <div className="mb-3">
-          <label htmlFor="" className="form-label"> Your remarks</label>
+          <label htmlFor="" className="form-label"> Your remarks :</label>
           <textarea className="form-control" name="" id="" rows="3"></textarea>
       </div>
     <button
