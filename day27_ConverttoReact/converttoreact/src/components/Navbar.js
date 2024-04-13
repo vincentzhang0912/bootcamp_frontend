@@ -6,27 +6,25 @@ const Navbar = () => {
     
     <div className="container-fluid col-md-auto">
          
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand text-white " to="/">
         <img 
         id="logo"
         src="imgs/logo.png"
+        style={{ marginRight: '5px' }}
         alt="logo"
-      />
+      />HRSWIM
       </Link>
-
-
-      <Link to="/" className="bi bi-house-door navbar-brand text-white " >Home</Link>
-      
 
       <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon "></span>
       </button>
-
-   
     
       <div className="collapse navbar-collapse text-white d-flex justify-content-start" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-
+          <li className="nav-item mx-3">
+          <Link to="/" className="bi bi-house-door  text-white " >Home</Link>
+      
+          </li>
           <li className="nav-item  mx-3 ">
             <i className="bi bi-list-task "  role="button"  aria-expanded="false">
             <Link to="About" className="text-reset text-decoration-none">About Us</Link>
