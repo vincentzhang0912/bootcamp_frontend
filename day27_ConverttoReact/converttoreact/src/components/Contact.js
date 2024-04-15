@@ -1,7 +1,7 @@
 const Contact = () => {
   return ( 
-    <div className="container-fluid w-50  h-100" style={{ textAlign: 'left' }}>
-      <div className="mb-5 ">
+    <div className="container-fluid w-50  h-100 my-5" style={{ textAlign: 'left' }}>
+      <div className="mb-3 ">
         <label htmlFor="" className="form-label text-start" >Name :</label>
         <input
             type="text"

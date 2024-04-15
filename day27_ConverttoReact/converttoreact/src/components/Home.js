@@ -1,6 +1,6 @@
 const Home = () => {
   return ( 
-    <div className="container-fluid full-screen-img  " >
+    <div className="container-fluid vh-70  " >
      <img src="imgs/home.png" className="img-fluid " alt=""/>
     </div>
    );
