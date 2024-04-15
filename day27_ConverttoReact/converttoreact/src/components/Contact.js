@@ -1,6 +1,6 @@
 const Contact = () => {
   return ( 
-    <div className="container-fluid w-50 " style={{ textAlign: 'left' }}>
+    <div className="container-fluid w-50  h-100" style={{ textAlign: 'left' }}>
       <div className="mb-5 ">
         <label htmlFor="" className="form-label text-start" >Name :</label>
         <input
@@ -23,10 +23,7 @@ const Contact = () => {
               aria-describedby="helpId"
           />
       </div> 
-      <div className="form-check">
-          <input className="form-check-input" type="checkbox" value="" id="" />
-          <label className="form-check-label text-left" htmlFor=""> Notify via email</label>
-      </div>
+    
       <div className="mb-3">
           <label htmlFor="" className="form-label"> Your remarks :</label>
           <textarea className="form-control" name="" id="" rows="3"></textarea>

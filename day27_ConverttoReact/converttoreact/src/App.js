@@ -10,6 +10,7 @@ import About from './components/About';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import PageNotFound from './components/PageNoFound';
+import Login from './components/Login';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Footer/> */}
 
       <Navbar/> 
+      <Login/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='about' element={<About/>} />

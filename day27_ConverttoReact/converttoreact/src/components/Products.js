@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 const Products = () => {
   return ( 
     <>
@@ -5,51 +6,76 @@ const Products = () => {
     <div className="col-4">
       <div className="card">
         <div className="card-body">
-          <img src="imgs/home.jpg" className="img-fluid"/>
-          <p className="card-text">swimming goggles</p>
+          <img src="imgs/product01.png" className="img-fluid"/>
+          <div className="mt-3">
+            <h3>$99</h3>
+            <button class="btn btn-danger">Buy Now</button>
+          </div>
         </div>
       </div>
     </div>
     <div className="col-4">
       <div className="card">
         <div className="card-body">
-          <img src="imgs/home.jpg" className="img-fluid"/>
-          <p className="card-text">swimming goggles</p>
+          <img src="imgs/product01.png" className="img-fluid"/>
+          <div className="mt-3">
+            <h3>$99</h3>
+            <button class="btn btn-danger">Buy Now</button>
+          </div>
         </div>
       </div>
     </div>
     <div className="col-4">
       <div className="card">
         <div className="card-body">
-          <img src="imgs/home.jpg" className="img-fluid"/>
-          <p className="card-text">swimming goggles</p>
+          <img src="imgs/product01.png" className="img-fluid"/>
+          <div className="mt-3">
+            <h3>$99</h3>
+            <button class="btn btn-danger">Buy Now</button>
+          </div>
         </div>
       </div>
     </div>
     </div>
 
-  <div className="row " >
-    <div className="col-4">
+  <div className="row my-3" >
+    
+  <div className="col-4">
       <div className="card">
         <div className="card-body">
-          <img src="imgs/cap.jpeg" className="img-fluid"/>
-          <p className="card-text ">swimming cap</p>
+          <img src="imgs/product02.png" className="img-fluid"/>
+          <div className="mt-3">
+            <h3>$99</h3>
+            <button class="btn btn-danger">Buy Now</button>
+          </div>
+        
+          
         </div>
       </div>
     </div>
     <div className="col-4">
       <div className="card">
         <div className="card-body">
-          <img src="imgs/cap.jpeg" className="img-fluid"/>
-          <p className="card-text">swimming cap</p>
+          <img src="imgs/product02.png" className="img-fluid"/>
+          <div className="mt-3">
+            <h3>$99</h3>
+            <button class="btn btn-danger">Buy Now</button>
+          </div>
+        
+          
         </div>
       </div>
     </div>
     <div className="col-4">
       <div className="card">
         <div className="card-body">
-          <img src="imgs/cap.jpeg" className="img-fluid"/>
-          <p className="card-text">swimming cap</p>
+          <img src="imgs/product02.png" className="img-fluid"/>
+          <div className="mt-3">
+            <h3>$99</h3>
+            <button class="btn btn-danger">Buy Now</button>
+          </div>
+        
+          
         </div>
       </div>
     </div>
