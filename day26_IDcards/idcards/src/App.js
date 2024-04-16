@@ -17,7 +17,7 @@ function App() {
       <div className="d-flex ">
         {
           Data.data.map((elem)=>{
-            return(<IDCard iname={elem.name}  idesc={elem.des} />)
+            return(<IDCard iname={elem.name}  idesc={elem.des} isrc={elem.imgName}/>)
           })
         }
       </div>
